@@ -1,0 +1,19 @@
+{
+  "básico": {
+    "Aulas java básico": [
+      "java-basico/quadro-aula-001",
+      "java-basico/quadro-aula-002"
+      
+    ],
+    "Something in java básico": [
+      "java-basico/quadro-aula-003"
+    ]
+  },
+  "web": {
+    "Aulas java web": [
+      "java-web/quadro-aula-001",
+      "java-web/quadro-aula-002",
+      "java-web/quadro-aula-003"
+    ]
+  }
+}
