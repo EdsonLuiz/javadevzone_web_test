@@ -1,4 +1,3 @@
-
 name: github pages
 
 on:
@@ -21,10 +20,13 @@ jobs:
       working-directory: ./website
       run: npm install
 
-    - name: deploy
+    - name: build
       working-directory: ./website
+      run: npm run build
+
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v2.3.0
       env:
-        GIT_USER: edsonluiz
-        CURRENT_BRANCH: master
-      run: |
-        npm run publish-gh-pages
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./website/build/javadevzone_web_test
